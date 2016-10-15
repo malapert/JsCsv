@@ -37,8 +37,8 @@ npm install jscsv
 
 Look to the examples :
 
- * [testDev](https://github.com/malapert/JsVotable/blob/master/example/example1.html) 
- * [testOnline](https://github.com/malapert/JsVotable/blob/master/example/example2.html)
+ * [testDev - need requirejs](https://github.com/malapert/JsVotable/blob/master/example/testDev.html) 
+ * [testOnline](https://rawgit.com/malapert/JsCsv/master/example/testOnline.html)
 
 ## Running the tests
 
