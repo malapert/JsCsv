@@ -66,8 +66,10 @@ define(function () {
      */
     function parseRows(rows, lineWithData, commonSeparator, headerInfo) {
         var store = [];
-        for (var i=lineWithData; i<rows.length && rows[i].length!=0; i++) {
-            store.push(parseRow(rows[i], commonSeparator, headerInfo));
+        for (var i=lineWithData; i<rows.length; i++) {
+            if(rows[i].length !== 0) {
+                store.push(parseRow(rows[i], commonSeparator, headerInfo));
+            }
         }
         return store;
     }
@@ -141,12 +143,12 @@ define(function () {
                   "type":"Point",
                   "coordinates":[
                       this.store[i][RA],this.store[i][DEC]
-                  ]
-              },
-              "crs":{
-                  "type": "name",
-                  "properties": {
-                      "name": frame
+                  ],
+                  "crs":{
+                      "type": "name",
+                      "properties": {
+                          "name": frame
+                      }
                   }
               }
           };

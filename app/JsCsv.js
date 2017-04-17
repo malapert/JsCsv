@@ -24,7 +24,7 @@ define( ["./csv"], function(Csv) {
         JsCsv.version = {
             major : 1,
             minor : 1,
-            patch : 1,
+            patch : 2,
             date : "2017-04-17",
             toString : function () {
                 return this.major+ "." + this.minor + "." + this.patch;
