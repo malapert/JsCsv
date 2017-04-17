@@ -123,9 +123,10 @@ define(function () {
     /**
      * Transforms the parsed lines into GeoJSON.
      * @param mapping
+     * @param frame coordinate reference frame
      * @return {{type: string, id:string, features: Array}}
      */
-    Csv.prototype.getGeoJSon = function(mapping) {
+    Csv.prototype.getGeoJSon = function(mapping, frame) {
       var RA = mapping.RA;
       var DEC = mapping.DEC;
       var ID = mapping.ID;
@@ -141,6 +142,12 @@ define(function () {
                   "coordinates":[
                       this.store[i][RA],this.store[i][DEC]
                   ]
+              },
+              "crs":{
+                  "type": "name",
+                  "properties": {
+                      "name": frame
+                  }
               }
           };
           var newStore = JSON.parse(JSON.stringify(this.store[i]));
