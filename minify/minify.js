@@ -1,20 +1,16 @@
 ({
-	baseUrl: "../app",
+	baseUrl: "../app",	
 	name: "JsCsv",
-	out: "../JsCsv.min.js",
+	include: ["JsCsv"],
+	insertRequire: ["JsCsv"],
+	out: "../JsCsv.min.js",	
 	optimize: "uglify2",
-	onBuildWrite: function ( name, path, contents )
-	{
-		contents = contents
-			.replace( /define\s*\([^{]*?{/, "" )
-			.replace( /\s*return\s+[^\}]+(\}\);[^\w\}]*)$/, "" )
-			.replace( /\}\);[^}\w]*$/, "" );
-
-		return contents;
-	},
 	wrap: {
-		start: "(function() {",
-		end: "\nreturn JsCsv; }());"
+		startFile: "wrap.start",
+		endFile: "wrap.end"
+	},
+	paths: {
+		"JsCsv": "JsCsv"
 	},
 	uglify2: {
 		//Example of a specialized config. If you are fine
