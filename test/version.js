@@ -9,6 +9,6 @@ var JsCsv = requirejs("../../app/JsCsv");
 describe("Checking version", function () {
 
    it("it checks the version", function () {
-   	assert.equal(JsCsv.version,"1.1.3");
+   	assert.equal(JsCsv.version,"1.1.4");
    });
 });

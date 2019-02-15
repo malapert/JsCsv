@@ -1,7 +1,7 @@
 /*******************************************************************************
  * Copyright 2016 - Jean-Christophe Malapert
  *
- * This file is part of JsVotable.
+ * This file is part of JsCsv.
  *
  * JsCsv is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ define( ["./csv"], function(Csv) {
         JsCsv.version = {
             major : 1,
             minor : 1,
-            patch : 3,
+            patch : 4,
             date : "2019-02-15",
             toString : function () {
                 return this.major+ "." + this.minor + "." + this.patch;
